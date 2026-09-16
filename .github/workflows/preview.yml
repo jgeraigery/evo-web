@@ -19,7 +19,7 @@ jobs:
       deployments: read
     steps:
       - name: Post "updating" status to PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -142,7 +142,7 @@ jobs:
           echo "GitHub Pages deployment did not confirm within 5 minutes; posting the link anyway."
 
       - name: Post preview URL to PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
