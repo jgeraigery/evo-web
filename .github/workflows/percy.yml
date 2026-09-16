@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Post pending status to PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         with:
@@ -99,7 +99,7 @@ jobs:
 
       - name: Report Percy status to PR
         if: always()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           JOB_STATUS: ${{ job.status }}
