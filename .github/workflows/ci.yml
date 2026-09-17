@@ -22,7 +22,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:ci
-      - uses: codecov/codecov-action@v5
+      - uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: Check for uncommitted changes
