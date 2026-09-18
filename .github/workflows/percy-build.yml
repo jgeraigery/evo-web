@@ -61,7 +61,7 @@ jobs:
           echo "$HEAD_REF" > packages/skin/_site/public/storybook/.percy-branch
 
       - name: Upload Storybook artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: storybook-static
           path: packages/skin/_site/public/storybook
